@@ -1,0 +1,8 @@
+#page_header_container {
+    position: fixed;
+    border-bottom: 1px solid #ccc;
+    background-color: #4B0082;
+    width: 100%;
+    top: 0;
+    left: 0;
+}

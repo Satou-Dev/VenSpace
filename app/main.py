@@ -1,5 +1,5 @@
 import fastapi
-from fastapi import FastAPI
+from fastapi import FastAPI, Request
 from fastapi.templating import Jinja2Templates
 from fastapi.staticfiles import StaticFiles
 
@@ -11,5 +11,5 @@ app.mount("/static", StaticFiles(directory="static"), name="static")
 
 
 @app.get("/")
-async def homepage(req: fastapi.Request):
+async def homepage(req: Request):
     return templates.TemplateResponse("homepage.html", {"request": req})
